@@ -27,19 +27,19 @@ body{
 :where(.css-dev-only-do-not-override-jyyyi3).ant-image-preview-root .ant-image-preview-mask, :where(.css-dev-only-do-not-override-jyyyi3).ant-modal-root .ant-modal-mask,
 :where(.css-dev-only-do-not-override-jyyyi3).ant-drawer .ant-drawer-mask{
   background-color: rgb(0 0 0 / 70%);
-  z-index: 10000;
+  z-index: 10000 !important;
 }
 :where(.css-dev-only-do-not-override-jyyyi3).ant-image-preview-root .ant-image-preview-wrap, :where(.css-dev-only-do-not-override-jyyyi3).ant-modal-root .ant-modal-wrap{
-  z-index: 10010;
+  z-index: 10010 !important;
 }
 :where(.css-dev-only-do-not-override-jyyyi3).ant-image-preview-operations-wrapper,
 :where(.css-dev-only-do-not-override-jyyyi3).ant-drawer .ant-drawer-content-wrapper{
-  z-index: 10100;
+  z-index: 10100 !important;
 }
 :where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
 }
 @media (max-width: 767px) {
   .ant-pro-form-login-page-container{
@@ -55,15 +55,16 @@ body{
 .ant-message{
   z-index: 100000 !important;
 }
-:where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory .ant-tree-treenode-selected:hover::before, :where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory .ant-tree-treenode-selected::before{
+:where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory  .ant-tree-treenode-selected:hover::before, 
+:where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory .ant-tree-treenode-selected{
   background: transparent !important;
 }
 :where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper.ant-tree-node-selected{
-  color: black;
+  color: black !important;
 }
 .ant-pro-form-login-page-header{
-  flex-direction: column;
-  height: auto;
+  flex-direction: column !important;
+  height: auto !important;
 }
 .content{
   height: 100vh;
