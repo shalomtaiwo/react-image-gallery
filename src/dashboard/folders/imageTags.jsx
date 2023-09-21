@@ -66,84 +66,87 @@ const ImageTags = ({ tags, setTags }) => {
 		borderStyle: "dashed",
 	};
 	return (
-		<Space
-			size={[0, 8]}
-			wrap
-		>
-			{tags.map((tag, index) => {
-				if (editInputIndex === index) {
-					return (
-						<Input
-							ref={editInputRef}
-							key={tag}
-							size="small"
-							style={tagInputStyle}
-							value={editInputValue}
-							onChange={handleEditInputChange}
-							onBlur={handleEditInputConfirm}
-							onPressEnter={handleEditInputConfirm}
-						/>
-					);
-				}
-				const isLongTag = tag.length > 10;
-				const tagElem = (
-					<Tag
-						key={tag}
-						closable={index !== -1}
-						style={{
-							userSelect: "none",
-						}}
-						onClose={() => handleClose(tag)}
-					>
-						<span
-							onDoubleClick={(e) => {
-								if (index !== 0) {
-									setEditInputIndex(index);
-									setEditInputValue(tag);
-									e.preventDefault();
-								}
-							}}
-						>
-							{isLongTag ? `${tag.slice(0, 20)}...` : tag}
-						</span>
-					</Tag>
-				);
-				return isLongTag ? (
-					<Tooltip
-						title={tag}
-						key={tag}
-					>
-						{tagElem}
-					</Tooltip>
-				) : (
-					tagElem
-				);
-			})}
-			{inputVisible ? (
-				<Input
-					ref={inputRef}
-					type="text"
-					size="small"
-					style={tagInputStyle}
-					value={inputValue}
-					onChange={handleInputChange}
-					onBlur={handleInputConfirm}
-					onPressEnter={handleInputConfirm}
-				/>
-			) : (
-				<>
-					{tags.length < 2 && (
+		<>
+			<p>Tags are required</p>
+			<Space
+				size={[0, 8]}
+				wrap
+			>
+				{tags.map((tag, index) => {
+					if (editInputIndex === index) {
+						return (
+							<Input
+								ref={editInputRef}
+								key={tag}
+								size="small"
+								style={tagInputStyle}
+								value={editInputValue}
+								onChange={handleEditInputChange}
+								onBlur={handleEditInputConfirm}
+								onPressEnter={handleEditInputConfirm}
+							/>
+						);
+					}
+					const isLongTag = tag.length > 10;
+					const tagElem = (
 						<Tag
-							style={tagPlusStyle}
-							icon={<PlusOutlined />}
-							onClick={showInput}
+							key={tag}
+							closable={index !== -1}
+							style={{
+								userSelect: "none",
+							}}
+							onClose={() => handleClose(tag)}
 						>
-							Add Tag
+							<span
+								onDoubleClick={(e) => {
+									if (index !== 0) {
+										setEditInputIndex(index);
+										setEditInputValue(tag);
+										e.preventDefault();
+									}
+								}}
+							>
+								{isLongTag ? `${tag.slice(0, 20)}...` : tag}
+							</span>
 						</Tag>
-					)}
-				</>
-			)}
-		</Space>
+					);
+					return isLongTag ? (
+						<Tooltip
+							title={tag}
+							key={tag}
+						>
+							{tagElem}
+						</Tooltip>
+					) : (
+						tagElem
+					);
+				})}
+				{inputVisible ? (
+					<Input
+						ref={inputRef}
+						type="text"
+						size="small"
+						style={tagInputStyle}
+						value={inputValue}
+						onChange={handleInputChange}
+						onBlur={handleInputConfirm}
+						onPressEnter={handleInputConfirm}
+					/>
+				) : (
+					<>
+						{tags.length < 2 && (
+							<Tag
+								style={tagPlusStyle}
+								icon={<PlusOutlined />}
+								onClick={showInput}
+							>
+								Add Tag
+							</Tag>
+						)}
+					</>
+				)}
+			</Space>
+		</>
 	);
 };
 export default ImageTags;

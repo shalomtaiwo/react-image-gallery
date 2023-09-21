@@ -24,19 +24,21 @@ body{
  .login-form-button, .ant-tree-title {
   width: 100% !important;
 }
-:where(.css-dev-only-do-not-override-jyyyi3).ant-image-preview-root .ant-image-preview-mask, :where(.css-dev-only-do-not-override-jyyyi3).ant-modal-root .ant-modal-mask,
-:where(.css-dev-only-do-not-override-jyyyi3).ant-drawer .ant-drawer-mask{
-  background-color: rgb(0 0 0 / 70%);
+.ant-modal-mask,
+.ant-drawer-mask,
+.ant-image-preview-mask{
+  background-color: rgb(0 0 0 / 70%) !important;
   z-index: 10000 !important;
 }
-:where(.css-dev-only-do-not-override-jyyyi3).ant-image-preview-root .ant-image-preview-wrap, :where(.css-dev-only-do-not-override-jyyyi3).ant-modal-root .ant-modal-wrap{
+.ant-modal-wrap,
+.ant-image-preview-wrap,
+.ant-drawer-content-wrapper{
   z-index: 10010 !important;
 }
-:where(.css-dev-only-do-not-override-jyyyi3).ant-image-preview-operations-wrapper,
-:where(.css-dev-only-do-not-override-jyyyi3).ant-drawer .ant-drawer-content-wrapper{
+.ant-image-preview-operations-wrapper{
   z-index: 10100 !important;
 }
-:where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper,
+.ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper,
 :where(.css-5attbm).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper{
   display: flex !important;
   align-items: center !important;
