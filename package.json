@@ -13,7 +13,7 @@
     "@ant-design/icons": "^5.2.6",
     "@ant-design/pro-components": "^2.6.21",
     "ant-design-pro": "^2.3.2",
-    "antd": "^5.9.1",
+    "antd": "^5.0.0",
     "antd-img-crop": "^4.13.0",
     "axios": "^1.5.0",
     "firebase": "^10.4.0",
