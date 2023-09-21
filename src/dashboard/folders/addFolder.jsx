@@ -98,6 +98,7 @@ const AddFolder = () => {
 				open={isModalOpen}
 				maskClosable={false}
 				destroyOnClose={true}
+				onCancel={handleCancel}
 				footer={[
 					<Button
 						key="cancel"
