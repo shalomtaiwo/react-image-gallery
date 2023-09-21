@@ -13,7 +13,7 @@
     "@ant-design/icons": "^5.2.6",
     "@ant-design/pro-components": "^2.6.21",
     "ant-design-pro": "^2.3.2",
-    "antd": "^5.0.0",
+    "antd": "^5.9.2",
     "antd-img-crop": "^4.13.0",
     "axios": "^1.5.0",
     "firebase": "^10.4.0",
@@ -23,6 +23,20 @@
     "react-router-dom": "^6.16.0",
     "react-use": "^17.4.0",
     "uuid": "^9.0.1"
+  },
+  "overrides": {
+    "@ant-design/icons": {
+      "antd": "^5.9.2"
+    },
+    "@ant-design/pro-components": {
+      "antd": "^5.9.2"
+    },
+    "ant-design-pro": {
+      "antd": "^5.9.2"
+    },
+    "antd-img-crop": {
+      "antd": "^5.9.2"
+    }
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
