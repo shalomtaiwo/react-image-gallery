@@ -36,7 +36,8 @@ body{
 :where(.css-dev-only-do-not-override-jyyyi3).ant-drawer .ant-drawer-content-wrapper{
   z-index: 10100 !important;
 }
-:where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper{
+:where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper,
+:where(.css-5attbm).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper{
   display: flex !important;
   align-items: center !important;
   justify-content: flex-start !important;
