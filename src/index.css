@@ -56,8 +56,7 @@ body{
 .ant-message{
   z-index: 100000 !important;
 }
-:where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory  .ant-tree-treenode-selected:hover::before, 
-:where(.css-5attbm).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-treenode-selected:hover::before
+:where(.css-5attbm).ant-tree.ant-tree-directory .ant-tree-treenode-selected:hover::before, :where(.css-5attbm).ant-tree.ant-tree-directory .ant-tree-treenode-selected::before
 {
   background: transparent !important;
 }

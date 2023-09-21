@@ -138,7 +138,7 @@ const ImageTags = ({ tags, setTags }) => {
 							icon={<PlusOutlined />}
 							onClick={showInput}
 						>
-							New Tag
+							Add Tag
 						</Tag>
 					)}
 				</>
