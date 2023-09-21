@@ -28,6 +28,12 @@ const UploadImages = ({ publicFolder, folderName, exist }) => {
 		setIsModalOpen(false);
 	};
 
+	const handleRemove = () => {
+		setFileList([]);
+		setNewFile("");
+		setLoading(false);
+	};
+
 	const onChange = ({ fileList: newFileList }) => {
 		setFileList(newFileList);
 	};
@@ -158,6 +164,7 @@ const UploadImages = ({ publicFolder, folderName, exist }) => {
 						listType="picture"
 						fileList={fileList}
 						onChange={onChange}
+						onRemove={handleRemove}
 						customRequest={customRequest}
 					>
 						{fileList.length < 1 && <Button>+ Upload Image</Button>}
