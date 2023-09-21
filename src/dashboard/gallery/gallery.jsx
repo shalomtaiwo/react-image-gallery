@@ -89,7 +89,7 @@ const Gallery = ({ user }) => {
 					>
 						{!loading && !galleryExists && <EmptyRoute />}
 						{!loading && galleryExists && filteredDataSource.length < 1 && (
-							<Empty />
+							<Empty description={'Folder is currently empty!'} />
 						)}
 						<div
 							style={{
