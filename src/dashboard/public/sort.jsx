@@ -41,6 +41,7 @@ const SortableImage = ({ src, alt, tags, id }) => {
 					display: "flex",
 					justifyContent: "start",
 					alignContent: "center",
+					touchAction: 'none'
 				}}
 			>
 				{tags &&
