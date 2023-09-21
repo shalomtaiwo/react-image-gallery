@@ -60,7 +60,7 @@ body{
 {
   background: transparent !important;
 }
-:where(.css-dev-only-do-not-override-jyyyi3).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper.ant-tree-node-selected,
+:where(.css-5attbm).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper.ant-tree-node-selected,
 :where(.css-5attbm).ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-treenode-selected
 {
   color: black !important;
