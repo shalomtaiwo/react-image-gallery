@@ -1,5 +1,5 @@
 import { SortableContext, rectSortingStrategy } from "@dnd-kit/sortable";
-import { Image, Skeleton } from "antd";
+import { Empty, Image, Skeleton } from "antd";
 import { useState, useEffect } from "react";
 import { db } from "../../config/firebase-config";
 import { collection } from "firebase/firestore";
@@ -58,6 +58,9 @@ const Public = () => {
 								console.log(`current index: ${current}, prev index: ${prev}`),
 						}}
 					>
+						{imageSearch !== "" && filteredDataSource.length < 1 && (
+							<Empty description="Search word not found!" />
+						)}
 						<div
 							style={{
 								display: "grid",

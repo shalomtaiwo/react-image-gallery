@@ -88,8 +88,11 @@ const Gallery = ({ user }) => {
 						}}
 					>
 						{!loading && !galleryExists && <EmptyRoute />}
-						{!loading && galleryExists && filteredDataSource.length < 1 && (
+						{(!loading && galleryExists) && imageSearch === '' && filteredDataSource.length < 1 && (
 							<Empty description={'Folder is currently empty!'} />
+						)}
+						{(!loading && galleryExists) && imageSearch !== "" && filteredDataSource.length < 1 && (
+							<Empty description="Search word not found!" />
 						)}
 						<div
 							style={{
